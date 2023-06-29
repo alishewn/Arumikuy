@@ -1,1 +1,1 @@
-# Arumikuy
+# Arumikuy personal neovim configuration
