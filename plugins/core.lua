@@ -33,6 +33,9 @@ return {
     opts = function(_, opts)
       local newOpt = {
         timeout = 0,
+        render = "compact",
+        fps = 60,
+        stages = "static",
       }
       if vim.g.transparent_background then newOpt.background_colour = "#0f1117" end
       return require("astronvim.utils").extend_tbl(opts, newOpt)
