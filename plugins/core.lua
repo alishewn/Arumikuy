@@ -32,7 +32,7 @@ return {
     "rcarriga/nvim-notify",
     opts = function(_, opts)
       local newOpt = {
-        timeout = 0,
+        timeout = 5,
         render = "compact",
         fps = 60,
         stages = "static",

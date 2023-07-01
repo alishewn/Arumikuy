@@ -1,4 +1,7 @@
 return {
+  -- colorscheme = "carbonfox",
+  -- colorscheme = "oxocarbon",
+  colorscheme = "vscode",
   -- add new user interface icon
   icons = {
     VimIcon = "",
