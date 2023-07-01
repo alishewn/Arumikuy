@@ -1,7 +1,3 @@
--- NOTE: insert mode :
--- <C-h> : delete previous character
--- <C-w> : delete previous word
--- <C-u> : delete to beginning of line
 local plugins = {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
@@ -28,6 +24,24 @@ local plugins = {
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.media.pets-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.cmake" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.project.project-nvim" },
+  { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  { import = "astrocommunity.syntax.hlargs-nvim" },
+  { import = "astrocommunity.syntax.vim-easy-align" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
 
 return plugins
