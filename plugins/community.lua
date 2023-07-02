@@ -4,7 +4,7 @@ local plugins = {
   -- bars-and-lines
   { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
-  { import = "astrocommunity.bars-and-lines.statuscol-nvim" }, -- ?
+  -- { import = "astrocommunity.bars-and-lines.statuscol-nvim" }, -- ?
   { import = "astrocommunity.bars-and-lines.scope-nvim" },
 
   ---------------------------------------------------------------------
