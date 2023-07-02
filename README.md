@@ -1,0 +1,2 @@
+# Arumikuy
+personal configurations 
