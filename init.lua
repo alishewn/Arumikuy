@@ -1,5 +1,14 @@
 return {
   colorscheme = "vscode",
+  options = {
+    g = {
+      diagnostics_mode = 2,
+      inlay_hints_enabled = false,
+    },
+    b = {
+      inlay_hints_enabled = false,
+    }
+  },
   icons = {
     VimIcon = "",
     ScrollText = "",

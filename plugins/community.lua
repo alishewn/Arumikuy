@@ -17,7 +17,7 @@ local plugins = {
   ---------------------------------------------------------------------
   --debugging
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
-
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   ---------------------------------------------------------------------
   --editing-support
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
@@ -39,7 +39,7 @@ local plugins = {
   ---------------------------------------------------------------------
   -- lsp
   { import = "astrocommunity.lsp.inc-rename-nvim" },
-
+  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   ---------------------------------------------------------------------
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
