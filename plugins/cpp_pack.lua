@@ -16,12 +16,12 @@ return {
     "jay-babu/mason-null-ls.nvim",
     opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "clang-format") end,
   },
-  {
-    "p00f/clangd_extensions.nvim",
-    ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
-    init = function() utils.list_insert_unique(astronvim.lsp.skip_setup, "clangd") end,
-    opts = function() return { server = require("astronvim.utils.lsp").config "clangd" } end,
-  },
+  -- {
+  --   "p00f/clangd_extensions.nvim",
+  --   ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+  --   init = function() utils.list_insert_unique(astronvim.lsp.skip_setup, "clangd") end,
+  --   opts = function() return { server = require("astronvim.utils.lsp").config "clangd" } end,
+  -- },
   {
     "Civitasv/cmake-tools.nvim",
     ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },

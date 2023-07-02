@@ -1,18 +1,22 @@
+local utils = require "astronvim.utils"
 return {
   {
     "p00f/clangd_extensions.nvim",
+    ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+    init = function() utils.list_insert_unique(astronvim.lsp.skip_setup, "clangd") end,
     opts = {
+      server = require("astronvim.utils.lsp").config "clangd",
       extensions = {
         -- defaults:
         -- Automatically set inlay hints (type hints)
-        autoSetHints = true,
+        autoSetHints = false,
         -- These apply to the default ClangdSetInlayHints command
         inlay_hints = {
-          inline = 0,
+          inline = vim.fn.has("nvim-0.10") == 1,
           -- Options other than `highlight' and `priority' only work
           -- if `inline' is disabled
           -- Only show inlay hints for the current line
-          only_current_line = true,
+          only_current_line = false,
           -- Event which triggers a refersh of the inlay hints.
           -- You can make this "CursorMoved" or "CursorMoved,CursorMovedI" but
           -- not that this may cause  higher CPU usage.
