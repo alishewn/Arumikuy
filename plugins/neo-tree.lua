@@ -8,6 +8,7 @@ return {
       enable_diagnostics = true,
       sources = {
         "filesystem",
+        "git_status",
       },
       window = {
         width = 35,
@@ -16,9 +17,11 @@ return {
         winbar = false,
         sources = {
           { source = "filesystem", display_name = get_icon("FolderClosed", 1, true) .. "File" },
+          -- { source = "git_status", display_name = get_icon("Git", 1, true) .. "Git" },
         },
       },
       filesystem = {
+        bind_to_cwd = true,
         filtered_items = {
           always_show = { ".github", ".gitignore", ".git" },
           hide_dotfiles = false,
