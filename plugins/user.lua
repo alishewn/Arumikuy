@@ -45,12 +45,20 @@ return {
       })
     end,
   },
-  -- {
-  --   "loctvl842/monokai-pro.nvim",
-  --   config = function()
-  --     require("monokai-pro").setup {
-  --       filter = "machine", -- classic | octagon | pro | machine | ristretto | spectrum
-  --     }
-  --   end
-  -- },
+  updater = {
+    channel = "nightly",
+    remote = "origin",
+    version = "latest",
+    branch = "main",
+    commit = nil,
+    pin_plugins = nil,
+    skip_prompts = false,
+    show_changelog = true,
+    auto_quit = false,
+    -- remotes = { -- easily add new remotes to track
+    --   ["remote_name"] = "https://remote_url.come/repo.git", -- full remote url
+    --   ["remote2"] = "github_user/repo", -- GitHub user/repo shortcut,
+    --   ["remote3"] = "github_user", -- GitHub user assumes user/AstroNvim.git
+    -- },
+  },
 }

@@ -2,39 +2,15 @@ local plugins = {
   "AstroNvim/astrocommunity",
   ---------------------------------------------------------------------
   -- bars-and-lines
-  { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
-  -- { import = "astrocommunity.bars-and-lines.statuscol-nvim" }, -- ?
   { import = "astrocommunity.bars-and-lines.scope-nvim" },
 
   ---------------------------------------------------------------------
   -- color
+  { import = "astrocommunity.color.ccc-nvim" },
   { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.color.vim-highlighter" },
-
-  ---------------------------------------------------------------------
-  -- colorscheme
-  { import = "astrocommunity.colorscheme.catppuccin" },
-  { -- further customize the options set by the community
-    "catppuccin",
-    opts = {
-      integrations = {
-        sandwich = false,
-        noice = true,
-        mini = true,
-        leap = true,
-        markdown = true,
-        neotest = true,
-        cmp = true,
-        overseer = true,
-        lsp_trouble = true,
-        ts_rainbow2 = true,
-      },
-      nvimtree = true,
-      no_italic = true,
-    },
-  },
 
   ---------------------------------------------------------------------
   -- completion
@@ -69,7 +45,6 @@ local plugins = {
   ---------------------------------------------------------------------
   -- lsp
   { import = "astrocommunity.lsp.inc-rename-nvim" },
-  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
 
   ---------------------------------------------------------------------
   -- motion
@@ -79,7 +54,6 @@ local plugins = {
   ---------------------------------------------------------------------
   -- pack
   { import = "astrocommunity.pack.bash" },
-  -- { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.python" },
@@ -101,7 +75,7 @@ local plugins = {
 
   ---------------------------------------------------------------------
   -- utility
-  -- { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
 }
 
 return plugins
