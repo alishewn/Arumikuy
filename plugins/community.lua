@@ -8,8 +8,7 @@ local plugins = {
   ---------------------------------------------------------------------
   -- color
   { import = "astrocommunity.color.ccc-nvim" },
-  { import = "astrocommunity.color.tint-nvim" },
-  { import = "astrocommunity.color.twilight-nvim" },
+  -- { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.vim-highlighter" },
   ---------------------------------------------------------------------
   -- completion

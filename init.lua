@@ -1,5 +1,5 @@
 return {
-  colorscheme = "catppuccin",
+  colorscheme = "vscode",
   icons = {
     VimIcon = "",
     ScrollText = "",
