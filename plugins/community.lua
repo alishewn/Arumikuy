@@ -11,7 +11,6 @@ local plugins = {
   { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.color.vim-highlighter" },
-
   ---------------------------------------------------------------------
   -- completion
   -- { import = "astrocommunity.completion.codeium-vim" },
@@ -19,10 +18,6 @@ local plugins = {
   ---------------------------------------------------------------------
   --debugging
   { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
-
-  ---------------------------------------------------------------------
-  --diagnostics
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
 
   ---------------------------------------------------------------------
   --editing-support

@@ -2,6 +2,7 @@ local get_icon = require("astronvim.utils").get_icon
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
+  event = "VeryLazy",
   opts = function(_, opts)
     return require("astronvim.utils").extend_tbl(opts, {
       close_if_last_window = true,
