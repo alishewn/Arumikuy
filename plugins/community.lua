@@ -16,7 +16,7 @@ local plugins = {
 
   ---------------------------------------------------------------------
   --debugging
-  { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
+  -- { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   ---------------------------------------------------------------------
   --editing-support
