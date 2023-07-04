@@ -1,6 +1,6 @@
 return {
   n = {
-    ["<A-right>"] = { "<cmd>bnext<cr>", desc = "next tab" },
+    ["<alt>-0"] = { "<cmd>bnext<cr>", desc = "next tab" },
   },
   v = {
   },
