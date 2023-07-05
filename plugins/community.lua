@@ -1,27 +1,18 @@
 local plugins = {
   "AstroNvim/astrocommunity",
-  ---------------------------------------------------------------------
-  -- bars-and-lines
-  -- { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
   { import = "astrocommunity.bars-and-lines.scope-nvim" },
-
-  ---------------------------------------------------------------------
-  -- color
-  { import = "astrocommunity.color.ccc-nvim" },
   -- { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.vim-highlighter" },
   ---------------------------------------------------------------------
   -- completion
   -- { import = "astrocommunity.completion.codeium-vim" },
 
-  ---------------------------------------------------------------------
-  --debugging
   -- { import = "astrocommunity.debugging.persistent-breakpoints-nvim" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   ---------------------------------------------------------------------
   --editing-support
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
-  { import = "astrocommunity.editing-support.cutlass-nvim" },
+  -- { import = "astrocommunity.editing-support.cutlass-nvim" },
   { import = "astrocommunity.editing-support.neogen" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
@@ -40,12 +31,10 @@ local plugins = {
   -- lsp
   { import = "astrocommunity.lsp.inc-rename-nvim" },
   -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
-  ---------------------------------------------------------------------
   -- motion
   { import = "astrocommunity.motion.mini-surround" },
   { import = "astrocommunity.motion.vim-matchup" },
 
-  ---------------------------------------------------------------------
   -- pack
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.go" },

@@ -12,10 +12,10 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "clangd") end,
   },
-  {
-    "jay-babu/mason-null-ls.nvim",
-    opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "clang-format") end,
-  },
+  -- {
+  --   "jay-babu/mason-null-ls.nvim",
+  --   opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "clang-format") end,
+  -- },
   -- {
   --   "p00f/clangd_extensions.nvim",
   --   ft = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },

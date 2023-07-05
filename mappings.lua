@@ -1,9 +1,13 @@
 return {
   n = {
-    ["<alt>-0"] = { "<cmd>bnext<cr>", desc = "next tab" },
+    ["C-6"] = { ": bnext", desc = "next tab" },
+    -- ["ga"] = { ": EasyAlign", desc = "" },
   },
   v = {
   },
   t = {
+  },
+  x = {
+    -- ["ga"] = { ": EasyAlign", desc = "" },
   },
 }

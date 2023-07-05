@@ -7,6 +7,15 @@ return {
   -- },
   -- indent guides for Neovim
   {
+    "williamboman/mason.nvim",
+    opts = {
+      github = {
+        download_url_template = "https://ghproxy.com/https://github.com/%s/releases/download/%s/%s",
+      },
+    }
+  },
+
+  {
     "lukas-reineke/indent-blankline.nvim",
     event = "User AstroFile",
     opts = function(_, opts)
