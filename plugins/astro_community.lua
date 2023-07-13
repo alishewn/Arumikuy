@@ -1,6 +1,6 @@
 local plugins = {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.bars-and-lines.scope-nvim" },
+  {import = "astrocommunity.bars-and-lines.scope-nvim" },
   -- { import = "astrocommunity.color.tint-nvim" },
   { import = "astrocommunity.color.vim-highlighter" },
   ---------------------------------------------------------------------
