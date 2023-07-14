@@ -88,11 +88,11 @@ return {
         optional = true,
         opts = {tools = {inlay_hints = {auto = false}}}
     }, {"m-demare/hlargs.nvim", opts = {}, event = "User AstroFile"},
-    {"ojroques/nvim-lspfuzzy", enabled = false},
-    {"ray-x/lsp_signature.nvim", enabled = false},
-    {"ray-x/navigator.lua", enabled = false},
-    {"rmagatti/goto-preview", enabled = false},
-    {"SmiteshP/nvim-navbuddy", enabled = false},
-    {"stevearc/aerial.nvim", enabled = false},
-    {"DNLHC/glance.nvim", enabled = false}, {"ms-jpq/coq_nvim", enabled = false}
+    {"ojroques/nvim-lspfuzzy", enabled = true},
+    {"ray-x/lsp_signature.nvim", enabled = true},
+    {"ray-x/navigator.lua", enabled = true},
+    {"rmagatti/goto-preview", enabled = true},
+    {"SmiteshP/nvim-navbuddy", enabled = true},
+    {"stevearc/aerial.nvim", enabled = true},
+    {"DNLHC/glance.nvim", enabled = true}, {"ms-jpq/coq_nvim", enabled = true}
 }

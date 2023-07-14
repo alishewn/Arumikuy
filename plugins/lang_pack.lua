@@ -261,7 +261,7 @@ return {
             end
         }
     }, {
-        {import = "astrocommunity.pack.toml"}, {
+        {
             "nvim-treesitter/nvim-treesitter",
             opts = function(_, opts)
                 if opts.ensure_installed ~= "all" then
