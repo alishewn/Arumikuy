@@ -70,15 +70,6 @@ return {
                                             "clang-format")
             end
         }, {
-            "p00f/clangd_extensions.nvim",
-            ft = {"c", "cpp", "objc", "objcpp", "cuda", "proto"},
-            init = function()
-                utils.list_insert_unique(astronvim.lsp.skip_setup, "clangd")
-            end,
-            opts = function()
-                return {server = require("astronvim.utils.lsp").config "clangd"}
-            end
-        }, {
             "Civitasv/cmake-tools.nvim",
             ft = {"c", "cpp", "objc", "objcpp", "cuda", "proto"},
             dependencies = {

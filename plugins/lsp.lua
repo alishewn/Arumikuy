@@ -14,19 +14,19 @@ return {
         "p00f/clangd_extensions.nvim",
         opts = {
             capabilities = {offsetEncoding = "utf-8"},
-            server = {
-                cmd = {
-                    "clangd", "--header-insertion=iwyu", "--clang-tidy",
-                    "-j=" .. nproc(), "--header-insertion-decorators",
-                    "--all-scopes-completion", "--pch-storage=memory",
-                    "--background-index", "--background-index-priority=low",
-                    "--clang-tidy", "--completion-style=detailed",
-                    "--function-arg-placeholders", "--header-insertion=never",
-                    "--limit-references=200", "--limit-results=200",
-                    "--enable-config", "--log=verbose",
-                    "--offset-encoding=utf-8", "--pretty"
-                }
-            },
+            -- server = {
+            --     cmd = {
+            --         "clangd", "--header-insertion=iwyu", "--clang-tidy",
+            --         "-j=" .. nproc(), "--header-insertion-decorators",
+            --         "--all-scopes-completion", "--pch-storage=memory",
+            --         "--background-index", "--background-index-priority=low",
+            --         "--clang-tidy", "--completion-style=detailed",
+            --         "--function-arg-placeholders", "--header-insertion=never",
+            --         "--limit-references=200", "--limit-results=200",
+            --         "--enable-config", "--log=verbose",
+            --         "--offset-encoding=utf-16", "--pretty"
+            --     }
+            -- },
             extensions = {autoSetHints = false}
         }
     }, {
