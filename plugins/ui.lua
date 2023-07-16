@@ -27,12 +27,12 @@ return {
             tabline = nil,
             winbar = nil,
             statusline = nil
-        }, {"archibate/lualine-time", event = "VeryLazy", opts = {}}, {},
+        }, {"archibate/lualine-time", event = "VeryLazy", opts = {}}, {}, -- {
+        --     "WhoIsSethDaniel/lualine-lsp-progress.nvim",
+        --     event = "VeryLazy",
+        --     opts = {}
+        -- }, 
         {
-            "WhoIsSethDaniel/lualine-lsp-progress.nvim",
-            event = "VeryLazy",
-            opts = {}
-        }, {
             "nvim-lualine/lualine.nvim",
             dependencies = {
                 "nvim-tree/nvim-web-devicons", "meuter/lualine-so-fancy.nvim"
@@ -48,7 +48,7 @@ return {
                     lualine_a = {{"fancy_mode", width = 3}},
                     lualine_b = {{"fancy_branch"}, {"fancy_diff"}},
                     lualine_c = {{"fancy_cwd", substitute_home = true}},
-                    lualine_x = {{"lsp_progress"}, {"fancy_lsp_servers"}},
+                    lualine_x = {{"fancy_lsp_servers"}},
                     lualine_y = {
                         {"fancy_filetype", ts_icon = ""}, {"fancy_macro"},
                         {"fancy_diagnostics"}, {"fancy_searchcount"},
