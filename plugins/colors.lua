@@ -1,6 +1,6 @@
 return {
     {
-        {"NvChad/nvim-colorizer.lua", enabled = false}, {
+        {"NvChad/nvim-colorizer.lua"}, {
             "uga-rosa/ccc.nvim",
             event = {"User AstroFile", "InsertEnter"},
             cmd = {
@@ -35,6 +35,11 @@ return {
             },
             cmd = {"Twilight", "TwilightEnable", "TwilightDisable"}
         }
+    }, {
+        "RRethy/vim-illuminate",
+        event = "User AstroFile",
+        opts = {},
+        config = function(_, opts) require("illuminate").configure(opts) end
     }, {
         {
             "azabiong/vim-highlighter",

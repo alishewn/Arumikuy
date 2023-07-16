@@ -87,12 +87,53 @@ return {
         "simrat39/rust-tools.nvim",
         optional = true,
         opts = {tools = {inlay_hints = {auto = false}}}
-    }, {"m-demare/hlargs.nvim", opts = {}, event = "User AstroFile"},
-    {"ojroques/nvim-lspfuzzy", enabled = true},
-    {"ray-x/lsp_signature.nvim", enabled = true},
-    {"ray-x/navigator.lua", enabled = true},
-    {"rmagatti/goto-preview", enabled = true},
-    {"SmiteshP/nvim-navbuddy", enabled = true},
-    {"stevearc/aerial.nvim", enabled = true},
-    {"DNLHC/glance.nvim", enabled = true}, {"ms-jpq/coq_nvim", enabled = true}
+    }, {
+        "onsails/lspkind.nvim",
+        opts = {
+            mode = 'symbol_text',
+            preset = 'codicons',
+            symbol_map = {
+                Text = "󰉿",
+                Method = "󰆧",
+                Function = "󰊕",
+                Constructor = "",
+                Field = "󰜢",
+                Variable = "󰀫",
+                Class = "󰠱",
+                Interface = "",
+                Module = "",
+                Property = "󰜢",
+                Unit = "󰑭",
+                Value = "󰎠",
+                Enum = "",
+                Keyword = "󰌋",
+                Snippet = "",
+                Color = "󰏘",
+                File = "󰈙",
+                Reference = "󰈇",
+                Folder = "󰉋",
+                EnumMember = "",
+                Constant = "󰏿",
+                Struct = "󰙅",
+                Event = "",
+                Operator = "󰆕",
+                TypeParameter = ""
+            }
+        }
+    }, {"ray-x/lsp_signature.nvim", opts = {}},
+    {"rmagatti/goto-preview", opts = {}},
+    {"simrat39/symbols-outline.nvim", opts = {}},
+    {"kosayoda/nvim-lightbulb", opts = {}}, {
+        "SmiteshP/nvim-navbuddy",
+        dependencies = {"SmiteshP/nvim-navic", "MunifTanjim/nui.nvim"},
+        opts = {lsp = {auto_attach = true}}
+    }, {
+        "ldelossa/litee.nvim",
+        opts = {
+            tree = {icon_set = "codicons"},
+            panel = {orientation = "right", panel_size = 30}
+        }
+    }, {"DNLHC/glance.nvim", opts = {}},
+    {"m-demare/hlargs.nvim", opts = {}, event = "User AstroFile"},
+    {"stevearc/aerial.nvim", opts = {}}
 }

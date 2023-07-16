@@ -1,4 +1,3 @@
-local status = require "astronvim.utils.status"
 local get_icon = require("astronvim.utils").get_icon
 return {
     {"Bekaboo/dropbar.nvim", event = "VeryLazy", opts = {}}, {
@@ -22,43 +21,40 @@ return {
             no_name_title = nil
         }
     }, {
-        "rebelot/heirline.nvim",
-        event = "VeryLazy",
-        optional = true,
-        opts = {
+        {
+            "rebelot/heirline.nvim",
+            optional = true,
             tabline = nil,
             winbar = nil,
-            attributes = {mode = {bold = true}},
-            icon_highlights = {file_icon = {statusline = false}},
-            statusline = {
-                hl = {fg = "fg", bg = "bg"},
-                status.component.mode {
-                    mode_text = {padding = {left = 1, right = 1}}
+            statusline = nil
+        }, {"archibate/lualine-time", event = "VeryLazy", opts = {}}, {},
+        {
+            "WhoIsSethDaniel/lualine-lsp-progress.nvim",
+            event = "VeryLazy",
+            opts = {}
+        }, {
+            "nvim-lualine/lualine.nvim",
+            dependencies = {
+                "nvim-tree/nvim-web-devicons", "meuter/lualine-so-fancy.nvim"
+            },
+            opts = {
+                options = {
+                    component_separators = {left = "│", right = "│"},
+                    section_separators = {left = "", right = ""},
+                    globalstatus = true,
+                    refresh = {statusline = 100}
                 },
-                status.component.git_branch {
-                    git_branch = {
-                        icon = {
-                            kind = "GitBranch",
-                            padding = {left = 1, right = 1}
-                        }
-                    }
-                },
-                status.component.file_info {
-                    filetype = false,
-                    filename = {modify = ":."},
-                    file_modified = false
-                },
-                status.component.git_diff(),
-                status.component.diagnostics(),
-                status.component.fill(),
-                status.component.cmd_info(),
-                status.component.fill(),
-                status.component.lsp {{padding = {right = 1}}},
-                status.component.treesitter(),
-                status.component.nav {
-                    ruler = {padding = {left = 0, right = 0}},
-                    percentage = false,
-                    scrollbar = false
+                sections = {
+                    lualine_a = {{"fancy_mode", width = 3}},
+                    lualine_b = {{"fancy_branch"}, {"fancy_diff"}},
+                    lualine_c = {{"fancy_cwd", substitute_home = true}},
+                    lualine_x = {{"lsp_progress"}, {"fancy_lsp_servers"}},
+                    lualine_y = {
+                        {"fancy_filetype", ts_icon = ""}, {"fancy_macro"},
+                        {"fancy_diagnostics"}, {"fancy_searchcount"},
+                        {"location"}, {"ctime"}
+                    },
+                    lualine_z = {}
                 }
             }
         }

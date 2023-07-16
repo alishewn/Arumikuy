@@ -14,5 +14,7 @@ return {
                 require("cmp").setup.cmdline(":", opts)
             end
         }
-    }
+    }, {{"ms-jpq/coq_nvim", opts = {}}}, {"kylechui/nvim-surround", opts = {}},
+    {"kylechui/nvim-surround", opts = {}}
+
 }

@@ -32,5 +32,14 @@ return {
         "nguyenvukhang/nvim-toggler",
         event = {"User AstroFile", "InsertEnter"},
         opts = {}
+    },
+    {"chentoast/marks.nvim", opts = {}},
+    {"ThePrimeagen/harpoon", opts = {}},
+    {
+        'sudormrfbin/cheatsheet.nvim',
+        dependencies = {
+            {'nvim-telescope/telescope.nvim'}, {'nvim-lua/popup.nvim'},
+            {'nvim-lua/plenary.nvim'}
+        }
     }
 }
