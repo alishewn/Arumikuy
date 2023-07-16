@@ -7,11 +7,11 @@ require("astronvim.utils").set_mappings(maps)
 
 return {
     {
-        {
-            "Pocco81/auto-save.nvim",
-            event = {"User AstroFile", "InsertEnter"},
-            opts = {trigger_events = {"InsertLeave"}}
-        }
+        -- {
+        --     "Pocco81/auto-save.nvim",
+        --     event = {"User AstroFile", "InsertEnter"},
+        --     opts = {trigger_events = {"InsertLeave"}}
+        -- }
     }, {{"LudoPinelli/comment-box.nvim", opts = {}}}, {
         {
             "gbprod/cutlass.nvim",

@@ -10,6 +10,7 @@ return {
         GitAdd = "",
         GitChange = "",
         GitDelete = ""
-    }
+    },
+    lazy = {git = {timeout = 30, url_format = 'https://hub.fgit.ml/%s.git'}}
     -- require("telescope").load_extension("scope")
 }
