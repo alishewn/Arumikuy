@@ -4,7 +4,8 @@ return {
         opts = {
             github = {
                 download_url_template = "https://ghproxy.com/https://github.com/%s/releases/download/%s/%s"
-            }
+            },
+            ui = {check_outdated_packages_on_open = false}
         }
     },
     updater = {

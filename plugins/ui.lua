@@ -88,7 +88,13 @@ return {
         end
     }, {"tiagovla/scope.nvim", event = "VeryLazy", opts = {}}, {
         "rcarriga/nvim-notify",
-        opts = {timeout = 1200, render = "compact", fps = 30, stages = "fade"}
+        opts = {
+            timeout = 1200,
+            render = "compact",
+            fps = 30,
+            stages = "fade",
+            level = "WARN"
+        }
     }, {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -137,8 +143,6 @@ return {
                 }
             })
         end
-    }, {"folke/trouble.nvim", enabled = false},
-    {"kylechui/nvim-surround", enabled = false},
-    {"chentoast/marks.nvim", enabled = false},
-    {"ThePrimeagen/harpoon", enabled = false}
+    }, {"folke/trouble.nvim", opts = {}}, {"kylechui/nvim-surround", opts = {}},
+    {"chentoast/marks.nvim", opts = {}}, {"ThePrimeagen/harpoon", opts = {}}
 }
