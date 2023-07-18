@@ -1,6 +1,6 @@
 return {
     options = {
-        g = {diagnostics_mode = 2, inlay_hints_enabled = false},
+        g = {diagnostics_mode = 3, inlay_hints_enabled = false},
         b = {inlay_hints_enabled = false},
         opt = {relativenumber = false}
     },
