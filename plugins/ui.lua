@@ -23,15 +23,12 @@ return {
     }, {
         {
             "rebelot/heirline.nvim",
+            enabled=false,
             optional = true,
             tabline = nil,
             winbar = nil,
             statusline = nil
-        }, {"archibate/lualine-time", event = "VeryLazy", opts = {}}, {}, -- {
-        --     "WhoIsSethDaniel/lualine-lsp-progress.nvim",
-        --     event = "VeryLazy",
-        --     opts = {}
-        -- }, 
+        }, {"archibate/lualine-time", event = "VeryLazy", opts = {}}, {},
         {
             "nvim-lualine/lualine.nvim",
             dependencies = {
@@ -101,7 +98,7 @@ return {
         cond = not vim.g.neovide,
         dependencies = {"MunifTanjim/nui.nvim", "rcarriga/nvim-notify"},
         opts = {
-            lsp = {progress = {enabled = true}},
+            lsp = {progress = {enabled = false}},
             presets = {
                 bottom_search = true, -- use a classic bottom cmdline for search
                 command_palette = false, -- position the cmdline and popupmenu together
@@ -128,7 +125,6 @@ return {
                             display_name = get_icon("FolderClosed", 1, true) ..
                                 "File"
                         }
-                        -- { source = "git_status", display_name = get_icon("Git", 1, true) .. "Git" },
                     }
                 },
                 filesystem = {
