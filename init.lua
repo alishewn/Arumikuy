@@ -15,8 +15,7 @@ return {
     lazy = {
         git = {
             timeout = 30,
-        --    url_format = 'https://hub.gitmirror.com/https://github.com/%s.git'
+           -- url_format = 'https://hub.gitmirror.com/https://github.com/%s.git'
         }
     }
-    -- require("telescope").load_extension("scope")
 }
