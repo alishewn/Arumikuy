@@ -42,5 +42,9 @@ return {
             {'nvim-telescope/telescope.nvim'}, {'nvim-lua/popup.nvim'},
             {'nvim-lua/plenary.nvim'}
         }
+    },{
+        "henry-hsieh/riscv-asm-vim",
+        event = "VeryLazy",
+        opts = {},
     }
 }

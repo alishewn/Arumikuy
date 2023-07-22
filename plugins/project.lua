@@ -57,12 +57,13 @@ return {
                 })
             end
         }
-    }, {
+    },
+    {
         {
             "jay-babu/project.nvim",
             name = "project_nvim",
             event = "VeryLazy",
-            opts = {ignore_lsp = {"lua_ls"}}
+            opts = {ignore_lsp = {"lua_ls"}, manual_mode = true }
         }, {
             "nvim-telescope/telescope.nvim",
             optional = true,
@@ -71,7 +72,8 @@ return {
                 require("telescope").load_extension "projects"
             end
         }
-    }, {
+    },
+    {
         "anuvyklack/windows.nvim",
         dependencies = {"anuvyklack/middleclass", "anuvyklack/animation.nvim"},
         opts = {},
