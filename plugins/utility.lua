@@ -1,50 +1,46 @@
+local utils = require "astronvim.utils"
 return {
     {
-        "williamboman/mason.nvim",
-        opts = {
-            github = {
-                download_url_template = "https://ghproxy.com/https://github.com/%s/releases/download/%s/%s"
+        {
+            "nvim-treesitter/nvim-treesitter",
+            opts = function(_, opts)
+                if opts.ensure_installed ~= "all" then
+                    opts.ensure_installed =
+                        utils.list_insert_unique(opts.ensure_installed, {
+                            "bash", "markdown", "markdown_inline", "regex",
+                            "vim"
+                        })
+                end
+            end
+        }, {
+            "folke/noice.nvim",
+            event = "VeryLazy",
+            cond = not vim.g.neovide,
+            dependencies = {"MunifTanjim/nui.nvim"},
+            opts = {
+                lsp = {progress = {enabled = false}},
+                presets = {
+                    bottom_search = true, -- use a classic bottom cmdline for search
+                    command_palette = false, -- position the cmdline and popupmenu together
+                    long_message_to_split = true, -- long messages will be sent to a split
+                    inc_rename = false, -- enables an input dialog for inc-rename.nvim
+                    lsp_doc_border = false -- add a border to hover docs and signature help
+                }
             },
-            ui = {check_outdated_packages_on_open = false}
+            init = function() vim.g.lsp_handlers_enabled = false end
+        }, {
+            "folke/edgy.nvim",
+            optional = true,
+            opts = function(_, opts)
+                if not opts.bottom then opts.bottom = {} end
+                table.insert(opts.bottom, {
+                    ft = "noice",
+                    size = {height = 0.4},
+                    filter = function(_, win)
+                        return vim.api.nvim_win_get_config(win).relative == ""
+                    end
+                })
+            end
         }
-    },
-    updater = {
-        channel = "nightly",
-        remote = "origin",
-        version = "latest",
-        branch = "main",
-        commit = nil,
-        pin_plugins = nil,
-        skip_prompts = false,
-        show_changelog = true,
-        auto_quit = false
-    },
-    {
-        "zbirenbaum/neodim",
-        event = "LspAttach",
-        opts = {
-            alpha = 0.75,
-            blend_color = "#000000",
-            update_in_insert = {enable = true, delay = 100},
-            hide = {virtual_text = true, signs = true, underline = true}
-        }
-    },
-    {
-        "nguyenvukhang/nvim-toggler",
-        event = {"User AstroFile", "InsertEnter"},
-        opts = {}
-    },
-    {"chentoast/marks.nvim", opts = {}},
-    {"ThePrimeagen/harpoon", opts = {}},
-    {
-        'sudormrfbin/cheatsheet.nvim',
-        dependencies = {
-            {'nvim-telescope/telescope.nvim'}, {'nvim-lua/popup.nvim'},
-            {'nvim-lua/plenary.nvim'}
-        }
-    },{
-        "henry-hsieh/riscv-asm-vim",
-        event = "VeryLazy",
-        opts = {},
     }
 }

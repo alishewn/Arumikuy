@@ -2,7 +2,7 @@ return {
     options = {
         g = {diagnostics_mode = 3, inlay_hints_enabled = false},
         b = {inlay_hints_enabled = false},
-        opt = {relativenumber = false}
+        opt = {relativenumber = false, foldcolumn = "0"}
     },
     icons = {
         VimIcon = "",
@@ -14,8 +14,8 @@ return {
     },
     lazy = {
         git = {
-            timeout = 30,
-           -- url_format = 'https://hub.gitmirror.com/https://github.com/%s.git'
+            timeout = 30
+            -- url_format = 'https://hub.gitmirror.com/https://github.com/%s.git'
         }
     }
 }
