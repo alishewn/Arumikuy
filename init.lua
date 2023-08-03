@@ -1,6 +1,10 @@
 return {
     options = {
-        g = {diagnostics_mode = 3, inlay_hints_enabled = false},
+        g = {
+            diagnostics_mode = 3,
+            inlay_hints_enabled = false,
+            riscv_asm_all_enable = 1
+        },
         b = {inlay_hints_enabled = false},
         opt = {relativenumber = false, foldcolumn = "0"}
     },

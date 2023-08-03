@@ -89,5 +89,10 @@ return {
             optional = true,
             opts = {tools = {inlay_hints = {auto = false}}}
         }
+    }, {
+        "henry-hsieh/riscv-asm-vim",
+        event = "VeryLazy",
+        opts = {},
+        config = function() end
     }
 }

@@ -9,7 +9,18 @@ return {
             tabline = nil,
             winbar = nil,
             statusline = nil
-        }, {"Bekaboo/dropbar.nvim", event = "VeryLazy", opts = {}}, {
+        }, -- {"Bekaboo/dropbar.nvim", event = "VeryLazy", opts = {}},
+        {
+            "utilyre/barbecue.nvim",
+            name = "barbecue",
+            version = "*",
+            dependencies = {
+                "SmiteshP/nvim-navic", "nvim-tree/nvim-web-devicons" -- optional dependency
+            },
+            opts = {
+                -- configurations go here
+            }
+        }, {
             'romgrk/barbar.nvim',
             event = "VeryLazy",
             dependencies = {
@@ -75,12 +86,12 @@ return {
                 stages = "fade",
                 level = "ERROR"
             }
-        }, -- disable noisy notify plugin
+        } -- disable noisy notify plugin
         --------------------------------------------
-        { -- use tmux instead of internal term
-            "akinsho/toggleterm.nvim",
-            enabled = false
-        } -- use tmux instead of internal term
+        -- { -- use tmux instead of internal term
+        --     "akinsho/toggleterm.nvim",
+        --     enabled = false
+        -- } -- use tmux instead of internal term
     }, -- other ui settings
     ---------------------------------------------------------------------------------------
     ---------------------------------------------------------------------------------------
